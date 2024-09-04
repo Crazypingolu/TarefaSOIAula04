@@ -11,11 +11,10 @@ public class ClasseThreads extends Thread{
     }
     @Override
     public void run() {
-        int flag = 0;
-        while (flag != 1) {
+        while (true) {
             sapo = met.salto(sapo);
             if (sapo[0] > 19 && sapo[1] > 19 && sapo[2] > 19 && sapo[3] > 19 && sapo[4] > 19) {
-                flag = 1;
+                break;
             }
         }
     }
