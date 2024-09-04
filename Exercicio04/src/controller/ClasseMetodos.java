@@ -4,11 +4,12 @@ public class ClasseMetodos {
     Random rand = new Random();
     public int[] aux;
     // gerar os pulos e verificar:
-    public void salto(int[] sapo){
+    public int[] salto(int[] sapo){
         for (int i = 0; i < 5; i++) {
             if (sapo[i] < 20)
                 sapo[i] = geraNum();
         }
+        return sapo;
     }
     // Gerar os números:
     public int geraNum(){
@@ -17,7 +18,11 @@ public class ClasseMetodos {
         return num;
     }
     // Classificar posição dos sapos:
-    public void classifica(int[] sapo, int[] pod) {
-        //
+    public int[][] classifica(int[] sapo, int[][] pod) {
+        // usa o auxiliar com a formula -> se sapo[i] < sapo[j] -> aux[i] -=1 -> fim do for aux[i] *= -1
+        for (int i = 0; i < 5; i++) {
+            
+        }
+        return pod;
     }
 }
