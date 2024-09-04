@@ -3,17 +3,17 @@ public class ClasseThreads extends Thread{
     ClasseMetodos met = new ClasseMetodos();
     // Criação de itens privados:
     private int[] sapo;
-    private int[][] pod;
+    private int index;
     // gerar contrutores:
-    public ClasseThreads(int[] sapo, int[][] pod){
+    public ClasseThreads(int[] sapo, int index){
         this.sapo = sapo;
-        this.pod = pod;
+        this.index = index;
     }
     @Override
     public void run() {
         while (true) {
-            sapo = met.salto(sapo);
-            if (sapo[0] > 19 && sapo[1] > 19 && sapo[2] > 19 && sapo[3] > 19 && sapo[4] > 19) {
+            sapo = met.salto(sapo, index);
+            if (sapo[index] > 19) {
                 break;
             }
         }
