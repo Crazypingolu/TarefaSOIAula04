@@ -11,14 +11,12 @@ public class ClasseThreads extends Thread{
     }
     @Override
     public void run() {
-        while (pod[0][4] == 0) {
+        int flag = 0;
+        while (flag != 1) {
             sapo = met.salto(sapo);
-            pod = met.classifica(sapo, pod);   
-        }
-        for (int i = 0; i < 5; i++) {
-            System.out.println(
-                (i + 1) + "º Sapo: " + pod[i]
-            );           
+            if (sapo[0] > 19 && sapo[1] > 19 && sapo[2] > 19 && sapo[3] > 19 && sapo[4] > 19) {
+                flag = 1;
+            }
         }
     }
 }
