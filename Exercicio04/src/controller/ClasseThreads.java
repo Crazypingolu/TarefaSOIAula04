@@ -11,7 +11,9 @@ public class ClasseThreads extends Thread{
     }
     @Override
     public void run() {
-        sapo = met.salto(sapo);
-        pod = met.classifica(sapo, pod);
+        while (pod[0][4] == 0) {
+            sapo = met.salto(sapo);
+            pod = met.classifica(sapo, pod);   
+        }
     }
 }
