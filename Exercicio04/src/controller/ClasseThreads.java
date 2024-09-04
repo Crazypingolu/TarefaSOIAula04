@@ -15,5 +15,10 @@ public class ClasseThreads extends Thread{
             sapo = met.salto(sapo);
             pod = met.classifica(sapo, pod);   
         }
+        for (int i = 0; i < 5; i++) {
+            System.out.println(
+                (i + 1) + "º Sapo: " + pod[i]
+            );           
+        }
     }
 }

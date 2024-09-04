@@ -5,9 +5,13 @@ public class ClasseMetodos {
     public int[] aux;
     // gerar os pulos e verificar:
     public int[] salto(int[] sapo){
+        int num;
         for (int i = 0; i < 5; i++) {
+            num = 0;
             if (sapo[i] < 20)
-                sapo[i] = geraNum();
+                num = geraNum();
+                sapo[i] = num;
+                System.out.println("Sapo "+ (i + 1) + " pulou: " + num + "m");
         }
         return sapo;
     }
