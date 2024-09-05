@@ -25,7 +25,10 @@ public class ClasseThreads extends Thread{
                         if (linha.contains("seq")){
                             ++cto;
                             String[] array = linha.split("=");
-                            System.out.println(cto +": "+ array[3]);
+                            System.out.println("uol " + cto +": "+ array[3]);
+                        } if (linha.contains("transmitted")) {
+                            String[] array2 = linha.split("=");
+                            System.out.println("Média de tempo de resposta da uol: "+ array2[3]);
                         }
                         linha = buff.readLine();
                     }
