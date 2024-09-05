@@ -3,6 +3,10 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 public class ClasseThreads extends Thread{
+    private int indx;
+    public ClasseThreads(int indx){
+        this.indx = indx;
+    }
     // Método: chamada de sistema operacional
     private String os(){
         String os = System.getProperty("os.name");
@@ -103,6 +107,6 @@ public class ClasseThreads extends Thread{
     // Método: run()
     @Override
     public void run() {
-        super.run();
+        chamadaPing(indx);
     }
 }
