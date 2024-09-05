@@ -27,7 +27,7 @@ public class ClasseThreads extends Thread{
                             String[] array = linha.split("=");
                             System.out.println("uol " + cto +": "+ array[3]);
                         } if (linha.contains("transmitted")) {
-                            String[] array2 = linha.split("=");
+                            String[] array2 = linha.split(",");
                             System.out.println("Média de tempo de resposta da uol: "+ array2[3]);
                         }
                         linha = buff.readLine();
@@ -48,8 +48,16 @@ public class ClasseThreads extends Thread{
                     BufferedReader buff = new BufferedReader(leit);
                     String linha = buff.readLine();
                     // tratamento de dados:
+                    int cto = 0;
                     while (linha != null){
-                        System.out.println(linha);
+                        if (linha.contains("seq")){
+                            ++cto;
+                            String[] array = linha.split("=");
+                            System.out.println("google " + cto +": "+ array[3]);
+                        } if (linha.contains("transmitted")) {
+                            String[] array2 = linha.split(",");
+                            System.out.println("Média de tempo de resposta da google: "+ array2[3]);
+                        }
                         linha = buff.readLine();
                     }
                     // fechamento:
@@ -68,8 +76,16 @@ public class ClasseThreads extends Thread{
                     BufferedReader buff = new BufferedReader(leit);
                     String linha = buff.readLine();
                     // tratamento de dados:
+                    int cto = 0;
                     while (linha != null){
-                        System.out.println(linha);
+                        if (linha.contains("seq")){
+                            ++cto;
+                            String[] array = linha.split("=");
+                            System.out.println("terra " + cto +": "+ array[3]);
+                        } if (linha.contains("transmitted")) {
+                            String[] array2 = linha.split(",");
+                            System.out.println("Média de tempo de resposta da terra: "+ array2[3]);
+                        }
                         linha = buff.readLine();
                     }
                     // fechamento:
